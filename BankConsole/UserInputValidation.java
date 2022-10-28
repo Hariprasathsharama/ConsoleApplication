@@ -5,8 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserInputValidation {
-    UserInputValidation validation;
-    Scanner input=new Scanner(System.in);
+    private final Scanner input=new Scanner(System.in);
     public String validName(){
         while (true) {
             String name = input.next();
@@ -17,9 +16,8 @@ public class UserInputValidation {
                 System.out.println("Enter the valid username");
             }
         }
-       
     }
-    public  String validPhonenumber() {
+    public  String validPhoneNumber() {
         while (true) {
             String number = input.next();
             Pattern p = Pattern.compile("^\\d{10}$");
